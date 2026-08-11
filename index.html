@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta -->
+  <title>闪电技术下载科技 — 专业数据下载服务 | 解决任何下载难题</title>
+  <meta name="description" content="闪电技术下载科技，专业数据下载服务商。帮您解决任何下载难题——文档、视频、音频、图片、数据库、网盘资源，极速稳定，安全可靠。淘宝店铺：66pp.taobao.com">
+  <meta name="keywords" content="数据下载,下载服务,文件下载,视频下载,文档下载,网盘下载,资源下载,闪电下载,下载难题,下载科技,66pp,闪电技术">
+  <meta name="author" content="闪电技术下载科技">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="baidu-site-verification" content="">
+  <meta name="sogou_site_verification" content="">
+  <link rel="canonical" href="https://hjkhjk56456456.github.io/shandian-download/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="闪电技术下载科技">
+  <meta property="og:title" content="闪电技术下载科技 — 专业数据下载服务">
+  <meta property="og:description" content="帮您解决任何下载难题。文档、视频、音频、图片、数据库、网盘资源下载，极速稳定，安全可靠。">
+  <meta property="og:url" content="https://hjkhjk56456456.github.io/shandian-download/">
+  <meta property="og:locale" content="zh_CN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="闪电技术下载科技 — 专业数据下载服务">
+  <meta name="twitter:description" content="帮您解决任何下载难题。极速稳定，安全可靠。">
+
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <style>
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      background: #080c14;
+      color: #e2e8f0;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ===== Utility ===== */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 100px 0; }
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #00c6ff;
+      margin-bottom: 16px;
+      background: rgba(0, 198, 255, 0.08);
+      padding: 6px 16px;
+      border-radius: 50px;
+      border: 1px solid rgba(0, 198, 255, 0.15);
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .section-desc {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    /* ===== Noise Background ===== */
+    .noise-bg {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    /* ===== Header / Nav ===== */
+    .header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(8, 12, 20, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; max-width: 1140px; margin: 0 auto; padding: 0 24px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.25rem; font-weight: 800; color: #ffffff;
+    }
+    .nav-logo .bolt { font-size: 1.5rem; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a {
+      font-size: 0.9rem; color: #94a3b8; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #00c6ff; }
+    .nav-cta {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #ffffff !important;
+      padding: 8px 22px;
+      border-radius: 8px;
+      font-weight: 700 !important;
+      transition: transform 0.2s, box-shadow 0.2s !important;
+    }
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 198, 255, 0.3);
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      position: relative; z-index: 1;
+      min-height: 100vh; display: flex; align-items: center;
+      padding-top: 80px;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(0, 198, 255, 0.08);
+      border: 1px solid rgba(0, 198, 255, 0.2);
+      border-radius: 50px; padding: 6px 18px;
+      font-size: 0.85rem; color: #00c6ff; font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .hero-badge .dot {
+      width: 8px; height: 8px; background: #00c6ff;
+      border-radius: 50%; animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 900; color: #ffffff;
+      line-height: 1.15; margin-bottom: 24px; letter-spacing: -0.03em;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.15rem; color: #94a3b8; margin-bottom: 36px;
+      max-width: 480px; line-height: 1.8;
+    }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px;
+      font-size: 1rem; font-weight: 700;
+      border-radius: 10px; border: none; cursor: pointer;
+      transition: all 0.25s; line-height: 1;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 198, 255, 0.25);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 198, 255, 0.4);
+    }
+    .btn-outline {
+      background: transparent; color: #e2e8f0;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-outline:hover {
+      border-color: #00c6ff; color: #00c6ff;
+      background: rgba(0, 198, 255, 0.05);
+    }
+    .hero-visual {
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-card {
+      background: linear-gradient(145deg, rgba(17, 24, 39, 0.9), rgba(30, 41, 59, 0.7));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px; padding: 48px 40px;
+      backdrop-filter: blur(10px);
+      position: relative; overflow: hidden;
+    }
+    .hero-card::before {
+      content: ''; position: absolute; top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle at 30% 30%, rgba(0, 198, 255, 0.08), transparent 60%);
+    }
+    .hero-card > * { position: relative; z-index: 1; }
+    .hero-card .big-icon { font-size: 3rem; margin-bottom: 16px; }
+    .hero-card h3 { font-size: 1.4rem; color: #ffffff; margin-bottom: 8px; font-weight: 700; }
+    .hero-card .stat-row {
+      display: flex; gap: 32px; margin-top: 24px; padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .hero-card .stat h4 { font-size: 1.6rem; color: #00c6ff; font-weight: 800; }
+    .hero-card .stat span { font-size: 0.8rem; color: #64748b; }
+
+    /* ===== Glow Orbs ===== */
+    .glow-orb {
+      position: absolute; border-radius: 50%; filter: blur(120px);
+      pointer-events: none; z-index: 0;
+    }
+    .glow-orb-1 {
+      width: 500px; height: 500px;
+      background: rgba(0, 198, 255, 0.06);
+      top: -100px; right: -150px;
+    }
+    .glow-orb-2 {
+      width: 400px; height: 400px;
+      background: rgba(0, 114, 255, 0.04);
+      bottom: -100px; left: -100px;
+    }
+
+    /* ===== Services ===== */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      margin-top: 48px;
+    }
+    .service-card {
+      background: rgba(17, 24, 39, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px; padding: 36px 28px;
+      transition: all 0.3s; position: relative; overflow: hidden;
+    }
+    .service-card:hover {
+      border-color: rgba(0, 198, 255, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 198, 255, 0.08);
+    }
+    .service-card .icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: rgba(0, 198, 255, 0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 20px;
+    }
+    .service-card h3 { font-size: 1.15rem; color: #ffffff; margin-bottom: 10px; font-weight: 700; }
+    .service-card p { font-size: 0.92rem; color: #94a3b8; line-height: 1.7; }
+
+    /* ===== Process ===== */
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+    .process-step {
+      text-align: center; position: relative;
+    }
+    .process-step .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #ffffff; font-size: 1.4rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 25px rgba(0, 198, 255, 0.2);
+    }
+    .process-step h4 { font-size: 1.05rem; color: #ffffff; margin-bottom: 8px; font-weight: 700; }
+    .process-step p { font-size: 0.88rem; color: #94a3b8; line-height: 1.6; }
+
+    /* ===== Why Us ===== */
+    .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
+    .why-item {
+      display: flex; gap: 16px; padding: 24px;
+      background: rgba(17, 24, 39, 0.4);
+      border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .why-item .check { color: #00c6ff; font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .why-item h4 { font-size: 1rem; color: #ffffff; margin-bottom: 4px; font-weight: 700; }
+    .why-item p { font-size: 0.88rem; color: #94a3b8; line-height: 1.6; }
+
+    /* ===== CTA Banner ===== */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(0, 198, 255, 0.08), rgba(0, 114, 255, 0.06));
+      border: 1px solid rgba(0, 198, 255, 0.15);
+      border-radius: 20px; padding: 60px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .cta-banner::before {
+      content: ''; position: absolute; top: -80%; left: -20%;
+      width: 140%; height: 260%;
+      background: radial-gradient(ellipse at center, rgba(0, 198, 255, 0.06), transparent 70%);
+    }
+    .cta-banner > * { position: relative; z-index: 1; }
+    .cta-banner h2 { font-size: 2rem; color: #ffffff; margin-bottom: 16px; font-weight: 800; }
+    .cta-banner p { color: #94a3b8; margin-bottom: 32px; font-size: 1.05rem; }
+
+    /* ===== Contact ===== */
+    .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
+    .contact-card {
+      background: rgba(17, 24, 39, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px; padding: 32px;
+      display: flex; gap: 20px; align-items: flex-start;
+      transition: all 0.3s;
+    }
+    .contact-card:hover {
+      border-color: rgba(0, 198, 255, 0.2);
+      background: rgba(17, 24, 39, 0.8);
+    }
+    .contact-card .c-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: rgba(0, 198, 255, 0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; flex-shrink: 0;
+    }
+    .contact-card h4 { font-size: 0.95rem; color: #ffffff; margin-bottom: 4px; font-weight: 700; }
+    .contact-card p, .contact-card a { font-size: 0.9rem; color: #94a3b8; }
+    .contact-card a:hover { color: #00c6ff; }
+
+    /* ===== Footer ===== */
+    .footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 32px 0;
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 1140px; margin: 0 auto; padding: 0 24px;
+    }
+    .footer p { font-size: 0.85rem; color: #64748b; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.85rem; color: #64748b; transition: color 0.2s; }
+    .footer-links a:hover { color: #00c6ff; }
+
+    /* ===== Mobile Nav Toggle ===== */
+    .nav-toggle { display: none; background: none; border: none; color: #ffffff; font-size: 1.5rem; cursor: pointer; }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { order: -1; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .cta-banner { padding: 40px 24px; }
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .hero { min-height: auto; padding: 120px 0 60px; }
+      .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons .btn { text-align: center; justify-content: center; }
+      .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="noise-bg"></div>
+
+<!-- Header -->
+<header class="header">
+  <nav class="nav">
+    <a href="/" class="nav-logo" aria-label="闪电技术下载科技首页">
+      <span class="bolt">⚡</span>闪电技术
+    </a>
+    <div class="nav-links">
+      <a href="#services">服务项目</a>
+      <a href="#process">下载流程</a>
+      <a href="#why">为什么选择我们</a>
+      <a href="#contact">联系方式</a>
+      <a href="https://66pp.taobao.com" class="nav-cta" target="_blank" rel="noopener noreferrer">进入店铺</a>
+    </div>
+    <button class="nav-toggle" aria-label="菜单" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'">☰</button>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">
+            <span class="dot"></span> 淘宝 · 12年金牌老店
+          </div>
+          <h1 id="hero-title">帮您<span class="highlight">解决任何</span><br>下载难题</h1>
+          <p>专业数据下载服务商。文档、视频、音频、图片、数据库、网盘资源——无论什么类型、什么平台、什么格式，闪电技术帮您搞定。</p>
+          <div class="hero-buttons">
+            <a href="https://66pp.taobao.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              🛒 进入淘宝店铺
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              💬 联系客服
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="big-icon">⚡</div>
+            <h3>闪电下载 · 极速交付</h3>
+            <p style="color:#94a3b8;font-size:0.9rem;">多年技术沉淀，支持全网平台</p>
+            <div class="stat-row">
+              <div class="stat">
+                <h4>10w+</h4>
+                <span>累计服务单量</span>
+              </div>
+              <div class="stat">
+                <h4>99.8%</h4>
+                <span>客户好评率</span>
+              </div>
+              <div class="stat">
+                <h4>12年</h4>
+                <span>行业经验</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <span class="section-label">服务项目</span>
+      <h2 class="section-title" id="services-title">我们能下载什么？</h2>
+      <p class="section-desc">覆盖全网主流平台，支持多种格式转换。只要有链接，我们就有办法。</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">📄</div>
+          <h3>文档资料下载</h3>
+          <p>百度文库、豆丁网、道客巴巴、原创力等平台文档，支持PDF/Word/PPT高清原版导出，保留排版格式。</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🎬</div>
+          <h3>视频音频下载</h3>
+          <p>B站、抖音、快手、YouTube、腾讯视频、优酷、爱奇艺等平台，支持4K高清和多种格式。</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">☁️</div>
+          <h3>网盘资源下载</h3>
+          <p>百度网盘、阿里云盘、夸克网盘、123云盘、迅雷云盘等，高速下载不限速，免客户端提取。</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🖼️</div>
+          <h3>图片素材下载</h3>
+          <p>千图网、昵图网、花瓣网、站酷等设计素材平台，高清原图无水印下载。</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🗄️</div>
+          <h3>数据库/学术资源</h3>
+          <p>知网、万方、维普、ScienceDirect等学术数据库，论文、专利、标准文献下载。</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🔧</div>
+          <h3>定制下载方案</h3>
+          <p>遇到特殊平台或复杂需求？我们提供一对一技术攻关，任何下载难题都能找到解决方案。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section" id="process" aria-labelledby="process-title" style="background:rgba(255,255,255,0.01);">
+    <div class="container">
+      <span class="section-label">下载流程</span>
+      <h2 class="section-title" id="process-title">三步搞定，简单高效</h2>
+      <p class="section-desc">不用装软件、不用学技术，把链接发给我们就行。</p>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h4>发送链接</h4>
+          <p>把您要下载的资源链接通过淘宝旺旺发给我们，说明具体需求。</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h4>确认付款</h4>
+          <p>我们评估后报价，您在淘宝拍下付款，资金全程在淘宝平台担保。</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h4>极速交付</h4>
+          <p>下载完成后通过网盘或邮箱发送给您，确认无误后确认收货。</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h4>售后保障</h4>
+          <p>文件有问题？随时联系补发或退款，售后无忧。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="section" id="why" aria-labelledby="why-title">
+    <div class="container">
+      <span class="section-label">为什么选择我们</span>
+      <h2 class="section-title" id="why-title">12年技术沉淀，值得信赖</h2>
+      <p class="section-desc">不是所有下载服务都靠谱。我们靠技术说话，靠口碑生存。</p>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="check">✓</span>
+          <div>
+            <h4>技术实力过硬</h4>
+            <p>自主研发下载工具链，不是简单浏览器插件搬运，能搞定别人搞不定的。</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="check">✓</span>
+          <div>
+            <h4>淘宝平台担保</h4>
+            <p>全程淘宝交易，资金安全有保障，不满意可申请退款。</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="check">✓</span>
+          <div>
+            <h4>数据安全保密</h4>
+            <p>下载完成后立即删除源文件，绝不泄露客户隐私和下载内容。</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="check">✓</span>
+          <div>
+            <h4>7×24小时在线</h4>
+            <p>急单优先处理，深夜也有人值班，不耽误您的使用。</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="check">✓</span>
+          <div>
+            <h4>格式全面支持</h4>
+            <p>PDF、Word、Excel、PPT、MP4、MP3、JPG、PNG……几乎所有常见格式。</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="check">✓</span>
+          <div>
+            <h4>新平台持续跟进</h4>
+            <p>技术团队持续研究新平台的下载方案，保持技术领先。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>有下载不了的资源？找我们就对了！</h2>
+        <p>把链接发过来，我们免费评估。下载成功再付款，零风险。</p>
+        <a href="https://66pp.taobao.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="font-size:1.1rem;">
+          ⚡ 立即咨询
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact" aria-labelledby="contact-title" style="background:rgba(255,255,255,0.01);">
+    <div class="container">
+      <span class="section-label">联系方式</span>
+      <h2 class="section-title" id="contact-title">联系闪电技术</h2>
+      <p class="section-desc">多种方式联系我们，推荐使用淘宝旺旺沟通。</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="c-icon">🛒</div>
+          <div>
+            <h4>淘宝店铺</h4>
+            <a href="https://66pp.taobao.com" target="_blank" rel="noopener noreferrer">66pp.taobao.com</a>
+            <p style="font-size:0.8rem;color:#64748b;margin-top:4px;">店铺ID：213036574</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="c-icon">💬</div>
+          <div>
+            <h4>淘宝旺旺</h4>
+            <p>打开淘宝APP或PC客户端，搜索店铺"66pp.taobao.com"联系客服</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <p>&copy; 2026 闪电技术下载科技 — 帮您解决任何下载难题</p>
+    <div class="footer-links">
+      <a href="https://66pp.taobao.com" target="_blank" rel="noopener noreferrer">淘宝店铺</a>
+      <a href="#services">服务项目</a>
+      <a href="#contact">联系方式</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Schema.org Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "闪电技术下载科技",
+  "description": "专业数据下载服务商，帮您解决任何下载难题——文档、视频、音频、图片、数据库、网盘资源下载。",
+  "url": "https://hjkhjk56456456.github.io/shandian-download/",
+  "sameAs": [
+    "https://66pp.taobao.com"
+  ],
+  "currenciesAccepted": "CNY",
+  "priceRange": "¥1 - ¥100",
+  "areaServed": {
+    "@type": "Country",
+    "name": "China"
+  }
+}
+</script>
+
+</body>
+</html>

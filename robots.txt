@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://hjkhjk56456456.github.io/shandian-download/sitemap.xml
+
+# Crawl-delay for bots that support it
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 1
