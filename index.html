@@ -564,7 +564,7 @@
                   <svg viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="rgba(0,198,255,.12)"/><path d="M14 6v12M9 14l5 5 5-5" stroke="#00c6ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="22" x2="21" y2="22" stroke="#00c6ff" stroke-width="2" stroke-linecap="round"/></svg>
                   <div>
                     <div class="dl-file-name">资源文件下载中...</div>
-                    <div class="dl-file-size" id="dlSize">0 / 9.8 GB</div>
+                    <div class="dl-file-size" id="dlSize">0 / 1.8 TB</div>
                   </div>
                 </div>
                 <div class="dl-speed">
@@ -831,9 +831,9 @@ function copyWechat(){
       cnt=document.getElementById('dlCount'),sz=document.getElementById('dlSize'),
       st=document.getElementById('dlStatus'),t=0,step=10,total=10000,spd=1000;
   function tick(){
-    t+=step;var p=Math.min(t/total*100,100),done=Math.round(p*9.8)/100;
+    t+=step;var p=Math.min(t/total*100,100),done=Math.round(p*1.8)/100;
     pct.textContent=Math.round(p)+'%';cnt.textContent=Math.round(spd*(.6+.4*Math.random()));
-    sz.textContent=done.toFixed(1)+' / 9.8 GB';
+    sz.textContent=done.toFixed(1)+' / 1.8 TB';
     st.textContent=p<30?'正在连接...':p<70?'极速下载中...':p<95?'即将完成...':p>=100?'✅ 下载完成':'';
     if(p>=100){setTimeout(function(){t=0;bar.style.animation='none';bar.offsetHeight;bar.style.animation='dlProgress 10s ease-in-out infinite';},500)}
     else setTimeout(tick,step);
