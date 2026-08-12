@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://hjkhjk56456456.github.io/shandian-download/sitemap.xml
+Sitemap: https://www.dkios.art/sitemap.xml
 
 # Crawl-delay for bots that support it
 User-agent: Baiduspider
