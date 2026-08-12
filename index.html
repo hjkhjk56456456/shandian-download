@@ -283,6 +283,11 @@
       letter-spacing:.08em;margin-bottom:10px;
       padding:8px 20px;background:rgba(7,193,96,.08);
       border-radius:10px;border:1px dashed rgba(7,193,96,.3);
+      transition:all .2s;
+    }
+    .wechat-id:hover{
+      background:rgba(7,193,96,.15);border-color:#07C160;
+      transform:scale(1.03);
     }
     .wechat-tip{font-size:.85rem;color:#64748b}
 
@@ -644,11 +649,11 @@
         </div>
         <div class="wechat-info">
           <div class="wechat-name">微信客服 · <span>九尘</span></div>
-          <div class="wechat-id">
+          <div class="wechat-id" onclick="copyWechat()" id="wechatId" style="cursor:pointer" title="点击复制微信号">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 2v4M16 2v4M2 10h20"/></svg>
-            F6659K
+            <span id="wechatText">F6659K</span>
           </div>
-          <div class="wechat-tip">👆 复制微信号，打开微信添加好友</div>
+          <div class="wechat-tip" id="wechatTip">👆 点击微信号自动复制</div>
         </div>
       </div>
     </div>
@@ -670,6 +675,22 @@
 <!-- Schema.org Structured Data -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"闪电技术下载科技","description":"专业数据下载服务商，帮您解决任何下载难题——文档、视频、音频、图片、数据库、网盘资源下载。","url":"https://www.dkios.art/","sameAs":["https://66pp.taobao.com"],"currenciesAccepted":"CNY","priceRange":"¥1 - ¥100","areaServed":{"@type":"Country","name":"China"}}
+</script>
+
+<!-- Copy WeChat ID -->
+<script>
+function copyWechat(){
+  navigator.clipboard.writeText('F6659K').then(function(){
+    var t=document.getElementById('wechatText');
+    var tip=document.getElementById('wechatTip');
+    var old=t.textContent;
+    t.textContent='已复制 ✓';
+    t.style.color='#fff';
+    tip.textContent='✅ 微信号已复制，打开微信粘贴添加好友';
+    tip.style.color='#07C160';
+    setTimeout(function(){t.textContent=old;t.style.color='';tip.textContent='👆 点击微信号自动复制';tip.style.color='';},2000);
+  });
+}
 </script>
 
 </body>
