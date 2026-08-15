@@ -162,6 +162,19 @@
     .btn-outline:hover{border-color:#00c6ff;color:#00c6ff;background:rgba(0,198,255,.05)}
     .hero-visual{display:flex;align-items:center;justify-content:center}
 
+    /* ===== Hero light streams (video-like bg) ===== */
+    .hero-streams{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+    .hero-streams .stream{
+      position:absolute;width:50%;height:200%;
+      background:linear-gradient(90deg,transparent,rgba(0,198,255,.07),rgba(0,114,255,.04),transparent);
+      top:-50%;left:-60%;
+      transform:rotate(25deg);
+      animation:streamMove 9s linear infinite;
+    }
+    .hero-streams .stream:nth-child(2){animation-delay:4.5s;animation-duration:12s;width:35%}
+    .hero-streams .stream:nth-child(3){animation-delay:2s;animation-duration:7s;width:60%}
+    @keyframes streamMove{0%{left:-60%}100%{left:130%}}
+
     /* ===== Hero SVG Illustration ===== */
     .hero-illustration{position:relative;width:100%;max-width:480px}
     .hero-illustration svg{width:100%;height:auto}
@@ -360,6 +373,21 @@
     .stat-card .stat-num{font-size:2.6rem;font-weight:900;color:#00c6ff;margin-bottom:6px;line-height:1.1}
     .stat-card .stat-label{font-size:.85rem;color:#64748b}
 
+    /* ===== Testimonials ===== */
+    .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+    .testimonial-card{
+      background:linear-gradient(135deg,rgba(255,255,255,.85),rgba(240,247,255,.65));
+      border:1px solid rgba(0,198,255,.1);border-radius:16px;padding:32px 28px;
+      transition:all .35s;position:relative;
+    }
+    .testimonial-card:hover{border-color:rgba(0,198,255,.3);transform:translateY(-4px);box-shadow:0 0 30px rgba(0,198,255,.08)}
+    .testimonial-stars{color:#fbbf24;font-size:1rem;letter-spacing:2px;margin-bottom:14px}
+    .testimonial-text{font-size:.95rem;color:#475569;line-height:1.8;margin-bottom:20px}
+    .testimonial-author{display:flex;align-items:center;gap:12px}
+    .testimonial-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#00c6ff,#0072ff);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;flex-shrink:0}
+    .testimonial-name{font-size:.92rem;color:#0f172a;font-weight:700}
+    .testimonial-type{font-size:.78rem;color:#64748b}
+
     /* ===== Contact ===== */
     .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px}
     .contact-card{
@@ -466,6 +494,7 @@
       .process-steps{grid-template-columns:1fr 1fr;gap:24px}
       .process-step .step-img{width:60px;height:60px}
       .why-grid{grid-template-columns:1fr;gap:12px}
+      .testimonials-grid{grid-template-columns:1fr;gap:12px}
       .why-item{padding:20px}
       .why-icon{width:38px;height:38px}
       .contact-grid{grid-template-columns:1fr;gap:12px}
@@ -559,6 +588,9 @@
       <div class="particle"></div><div class="particle"></div><div class="particle"></div>
       <div class="particle"></div><div class="particle"></div><div class="particle"></div>
       <div class="particle"></div><div class="particle"></div>
+    </div>
+    <div class="hero-streams">
+      <div class="stream"></div><div class="stream"></div><div class="stream"></div>
     </div>
     <div class="container" style="position:relative;z-index:1;">
       <div class="hero-grid">
@@ -737,6 +769,50 @@
           <div class="stat-icon"><svg viewBox="0 0 40 40" fill="none"><rect x="6" y="8" width="28" height="24" rx="3" fill="none" stroke="#00c6ff" stroke-width="2.5"/><circle cx="20" cy="20" r="6" fill="none" stroke="#00c6ff" stroke-width="2.5"/><line x1="24" y1="24" x2="32" y2="32" stroke="#00c6ff" stroke-width="3" stroke-linecap="round"/></svg></div>
           <div class="stat-num">200+</div>
           <div class="stat-label">支持平台数量</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials" style="background:rgba(0,0,0,.02);">
+    <div class="container">
+      <span class="section-label">客户好评</span>
+      <h2 class="section-title">他们的选择，就是最好的证明</h2>
+      <p class="section-desc">10万+客户的选择，99.8%好评率，用口碑说话。</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"1.8TB的数据集，一晚上就帮我下好了，速度超乎想象。之前找了好几家都搞不定，这次终于解决了。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">王</div>
+            <div>
+              <div class="testimonial-name">王先生</div>
+              <div class="testimonial-type">数据下载 · 数据集</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"帮我搭建的独立站非常专业，SEO也优化好了，现在谷歌、百度都能搜到，询盘明显多了。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">李</div>
+            <div>
+              <div class="testimonial-name">李女士</div>
+              <div class="testimonial-type">网址制作 · 独立站</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"帮我写的爬虫脚本运行稳定，效率很高，还耐心教我怎么用，售后服务特别到位。"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">张</div>
+            <div>
+              <div class="testimonial-name">张先生</div>
+              <div class="testimonial-type">程序制作 · 数据爬取</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
